@@ -40,3 +40,5 @@ bin/
 .env
 .env.*
 !.env.example
+# Arquivos gerados pelo Maven
+target/
