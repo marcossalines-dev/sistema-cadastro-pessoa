@@ -1,0 +1,12 @@
+### Cadastrar uma pessoa
+POST http://localhost:8080/api/pessoas
+Content-Type: application/json
+
+{
+  "nome": "Marcos",
+  "idade": 16,
+  "sexo": "M",
+  "peso": 73.50,
+  "altura": 1.80,
+  "nacionalidade": "Brasil"
+}
