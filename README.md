@@ -1,27 +1,82 @@
 # Sistema de Cadastro de Pessoas
 
-Projeto desenvolvido em Java com integração ao MySQL, com o objetivo de praticar os fundamentos da programação orientada a objetos e a persistência de dados em banco de dados.
+API REST desenvolvida em Java com Spring Boot e MySQL para gerenciamento de cadastros de pessoas.
 
-## 🛠️ Tecnologias utilizadas
+O projeto tem como objetivo aplicar conceitos de programação orientada a objetos, arquitetura em camadas, persistência de dados e desenvolvimento de APIs REST.
 
-- Java
+## Tecnologias utilizadas
+
+- Java 25
+- Spring Boot 4.1.1
+- Spring Web
+- Spring Data JPA
+- Hibernate
 - MySQL
-- JDBC
+- Maven
+- Jakarta Validation
 - Git e GitHub
+- Postman
 
-## Funcionalidades e conhecimentos praticados
+## Funcionalidades
 
-- Modelagem de pessoas por meio de classes e objetos.
-- Organização do código em pacotes.
-- Conexão entre Java e MySQL utilizando JDBC.
-- Operações de acesso a dados por meio de uma classe de repositório.
+- Cadastro de pessoas.
+- Listagem de pessoas cadastradas.
+- Busca de pessoas por ID.
+- Atualização de cadastros.
+- Exclusão de registros.
+- Validação dos dados recebidos.
+- Tratamento centralizado de erros.
 
-## Objetivo do projeto
+## Endpoints da API
 
-Este projeto faz parte da minha jornada de aprendizado em desenvolvimento de software, com foco em Java e Backend. O objetivo é evoluir gradualmente na construção de aplicações, na integração com bancos de dados e nas boas práticas de programação.
+| Método | Endpoint | Descrição |
+|---|---|---|
+| POST | `/api/pessoas` | Cadastrar pessoa |
+| GET | `/api/pessoas` | Listar pessoas |
+| GET | `/api/pessoas/{id}` | Buscar pessoa por ID |
+| PUT | `/api/pessoas/{id}` | Atualizar pessoa |
+| DELETE | `/api/pessoas/{id}` | Excluir pessoa |
+
+## Arquitetura do projeto
+
+O backend utiliza arquitetura em camadas, separando as responsabilidades:
+
+- **Entity:** representação das entidades e mapeamento com o banco de dados.
+- **Repository:** acesso e persistência dos dados.
+- **Service:** implementação das regras de negócio.
+- **Controller:** gerenciamento das requisições HTTP.
+- **Exception:** tratamento centralizado de exceções.
+
+## Banco de dados
+
+O projeto utiliza MySQL para armazenar os dados das pessoas.
+
+- Banco de dados: `cadastro_pessoas`
+- Persistência realizada com Spring Data JPA e Hibernate.
+
+## Como executar o projeto
+
+1. Instale o JDK 25 e o MySQL.
+2. Crie o banco de dados `cadastro_pessoas`.
+3. Configure as credenciais do banco no arquivo `application.properties`.
+4. Abra o projeto no IntelliJ IDEA.
+5. Aguarde o carregamento das dependências Maven.
+6. Execute a classe `CadastroApplication`.
+7. Utilize o Postman para testar os endpoints.
+
+## Próximos passos
+
+- Desenvolver uma interface utilizando HTML, CSS e JavaScript.
+- Integrar o frontend à API REST.
+- Aprimorar a experiência de utilização do sistema.
 
 ## Autor
 
 **Marcos Vinicius de Souza Vack Salines**
 
 - GitHub: [@marcossalines-dev](https://github.com/marcossalines-dev)
+- LinkedIn: [Marcos Vinicius de Souza](https://www.linkedin.com/in/marcos-vinicius-de-souza-92728037b/)
+
+---
+
+Projeto desenvolvido para fins de aprendizado e evolução prática em Desenvolvimento de Software, com foco em Java e Backend.
