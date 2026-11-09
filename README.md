@@ -61,7 +61,7 @@ O projeto utiliza MySQL para armazenar os dados das pessoas.
 3. Configure as credenciais do banco no arquivo `application.properties`.
 4. Abra o projeto no IntelliJ IDEA.
 5. Aguarde o carregamento das dependências Maven.
-6. Execute a classe `CadastroApplication`.
+6. Execute a classe CadastroApplication.
 7. Utilize o Postman para testar os endpoints.
 
 ## Próximos passos
