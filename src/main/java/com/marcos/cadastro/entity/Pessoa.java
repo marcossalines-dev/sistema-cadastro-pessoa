@@ -1,17 +1,8 @@
 package com.marcos.cadastro.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import java.math.BigDecimal;
-import jakarta.persistence.Column;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.Pattern;
-
 
 
 @Entity
@@ -26,6 +17,7 @@ public class Pessoa {
     @Column(length = 100)
     private String nome;
 
+    @NotNull
     @Min(value = 1, message = "A idade deve ser no mínimo 1")
     private Integer idade;
 
@@ -34,10 +26,14 @@ public class Pessoa {
     @Pattern(regexp = "M|F", message = "O sexo deve ser informado como M ou F")
     private String sexo;
 
+    @NotNull
+    @Digits( integer = 3, fraction = 2)
     @Column(precision = 5, scale = 2)
     @DecimalMin(value = "0.01", message = "O peso deve ser maior que zero")
     private BigDecimal peso;
 
+    @NotNull
+    @Digits( integer = 1, fraction = 2)
     @Column(precision = 3, scale = 2)
     @DecimalMin(value = "0.01", message = "A altura deve ser maior que zero")
     private BigDecimal altura;

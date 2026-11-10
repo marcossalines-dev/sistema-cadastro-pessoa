@@ -19,8 +19,9 @@ public class PessoaController {
     }
 
     @PostMapping
-    public Pessoa salvar(@Valid @RequestBody Pessoa pessoa) {
-        return pessoaService.salvar(pessoa);
+    public ResponseEntity<Pessoa> salvar(@Valid @RequestBody Pessoa pessoa) {
+        Pessoa pessoaSalva = pessoaService.salvar(pessoa);
+        return ResponseEntity.status(201).body(pessoaSalva);
     }
 
     @GetMapping
